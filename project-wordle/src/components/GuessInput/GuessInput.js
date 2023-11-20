@@ -17,7 +17,7 @@ function GuessInput({words, setWords}) {
   return (
     <form className="guess-input-wrapper" onSubmit={handleSubmit}>
       <label htmlFor="guess-input">Enter guess:</label>
-      <input id="guess-input" type="text" value={word} onChange={handleOnChange} pattern="\w{5}" />
+      <input id="guess-input" type="text" value={word} onChange={handleOnChange} pattern="\w{5}" maxLength={5} />
     </form>
   );
 }
