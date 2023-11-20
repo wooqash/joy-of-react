@@ -2,6 +2,7 @@ import React from "react";
 
 import { sample } from "../../utils";
 import { WORDS } from "../../data";
+import Guess from "../Guess/Guess";
 import GuessInput from "../GuessInput/GuessInput";
 import GuessResults from "../GuessResults/GuessResults";
 
@@ -14,6 +15,7 @@ function Game() {
   const [words, setWords] = React.useState([]);
   return (
     <>
+      <Guess words={words} />
       <GuessResults words={words} />
       <GuessInput words={words} setWords={setWords} />
     </>
