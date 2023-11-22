@@ -8,7 +8,6 @@ function GuessResults({ words, answer }) {
     <>
       {range(NUM_OF_GUESSES_ALLOWED).map((row) => {
         const word = words[row] ? words[row].guess : [];
-        // const letters = word.length ? word.match(/\S/g) : [];
         const checkedWord = word.length ? checkGuess(word, answer) : [];
         return (
           <p className="guess" key={crypto.randomUUID()}>

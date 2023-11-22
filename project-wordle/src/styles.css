@@ -161,6 +161,14 @@ h1 {
   outline-offset: 4px;
 }
 
+.guess-input-wrapper--disabled label {
+  color: var(--color-gray-500);
+}
+
+.guess-input-wrapper--disabled input {
+  border-color: var(--color-gray-500);
+}
+
 .banner {
   position: fixed;
   left: 0;
