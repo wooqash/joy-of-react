@@ -1,10 +1,9 @@
 import React from "react";
 import { NUM_OF_GUESSES_ALLOWED } from "../../constants";
 
-function GuessInput({words, answer, setWords, setWin, setFail }) {
+function GuessInput({ words, answer, isDisabled, setWords, setWin, setFail,setIsDisabled }) {
   const [word, setWord] = React.useState("");
-  const [isDisabled, setIsDisabled] = React.useState(false);
-
+  
  
   const handleSubmit = (e) => {
     e.preventDefault();
