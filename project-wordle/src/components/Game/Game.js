@@ -6,6 +6,7 @@ import Banner from "../Banner/Banner";
 import GuessInput from "../GuessInput/GuessInput";
 import GuessResults from "../GuessResults/GuessResults";
 import ResetButton from "../ResetButton/ResetButton";
+import Keyboard from "../Keyboard/Keyboard";
 
 // Pick a random word on every pageload.
 // const answer = sample(WORDS);
@@ -24,6 +25,7 @@ function Game() {
       <Banner win={win} fail={fail} answer={answer} trials={words.length} />
       <GuessResults words={words} answer={answer}/>
       <GuessInput words={words} answer={answer} isDisabled={isDisabled} setWords={setWords} setFail={setFail} setWin={setWin} setIsDisabled={setIsDisabled} />
+      <Keyboard words={words} answer={answer} />
     </>
   );
 }

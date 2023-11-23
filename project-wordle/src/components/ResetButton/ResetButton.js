@@ -9,6 +9,10 @@ function ResetButton({ setWin, setFail, setWords, setAnser, setIsDisabled }) {
     setWords([]); 
     setAnser(sample(WORDS));
     setIsDisabled(false);
+    document.querySelectorAll('.keyboard-key').forEach(el => {
+      el.className = '';
+      el.className = 'keyboard-key'
+    })
   }
   return <button onClick={handleOnClick}>Reset game</button>;
 }
